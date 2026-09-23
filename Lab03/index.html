@@ -1,270 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>BẢNG DANH SÁCH QUẢN LÝ CA SĨ</h2>
     <table border="1">
-        <tr>
-            <th colspan="3">Danh sách ca sĩ</th>
-        </tr>
-        <tr>
-            <th>STT</th>
-            <th>Họ và tên</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td rowspan="2">1</td>
-            <td rowspan="2">Quang Thọ</td>
-            <td>quangtho@gmail.com</td>
-        </tr>
-        <tr>
-            <td>quantho@yahoo.com</td>
-        </tr>
+      <tr>
+        <th colspan="3">Danh sách ca sĩ</th>
+      </tr>
+      <tr>
+        <th>STT</th>
+        <th>Họ và tên</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td rowspan="2">1</td>
+        <td rowspan="2">Quang Thọ</td>
+        <td>quangtho@gmail.com</td>
+      </tr>
+      <tr>
+        <td>quantho@yahoo.com</td>
+      </tr>
     </table>
 
     <h2>QUẢN LÝ KẾT QUẢ HỌC TẬP</h2>
     <table border="1">
-        <tr >
-            <th colspan="5">KẾT QUẢ HỌC TẬP</th>
-        </tr>
-        <tr bgcolor="yellow">
-            <th rowspan="2">Họ và tên HS</th>
-            <th colspan="2">Năm Sinh</th>
-            <th rowspan="2">Điểm TB</th>
-            <th rowspan="2">Xếp Loại</th>
-        </tr>
-        <tr bgcolor="yellow">
-            <th>Nam</th>
-            <th>Nữ</th>
-        </tr>
-        <tr>
-            <td>Lê Thanh Xuân</td>
-            <td></td>
-            <td>1988</td>
-            <td>8.5</td>
-            <td>Giỏi</td>
-        </tr>
-        <tr>
-            <td>Phan Thế Hạ</td>
-            <td>1990</td>
-            <td></td>
-            <td>6.5</td>
-            <td>Khá</td>
-        </tr>
-        <tr>
-            <td>Trần Hoài Thu</td>
-            <td></td>
-            <td>1991</td>
-            <td>9.5</td>
-            <td>Xuất Sắc</td>
-        </tr>
-        <tr bgcolor="yellow">
-            <th colspan="3">Tổng số học sinh đạt:</th>
-            <th colspan="2">4 Học sinh</th>
-        </tr>
+      <tr>
+        <th colspan="5">KẾT QUẢ HỌC TẬP</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th rowspan="2">Họ và tên HS</th>
+        <th colspan="2">Năm Sinh</th>
+        <th rowspan="2">Điểm TB</th>
+        <th rowspan="2">Xếp Loại</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th>Nam</th>
+        <th>Nữ</th>
+      </tr>
+      <tr>
+        <td>Lê Thanh Xuân</td>
+        <td></td>
+        <td>1988</td>
+        <td>8.5</td>
+        <td>Giỏi</td>
+      </tr>
+      <tr>
+        <td>Phan Thế Hạ</td>
+        <td>1990</td>
+        <td></td>
+        <td>6.5</td>
+        <td>Khá</td>
+      </tr>
+      <tr>
+        <td>Trần Hoài Thu</td>
+        <td></td>
+        <td>1991</td>
+        <td>9.5</td>
+        <td>Xuất Sắc</td>
+      </tr>
+      <tr bgcolor="yellow">
+        <th colspan="3">Tổng số học sinh đạt:</th>
+        <th colspan="2">4 Học sinh</th>
+      </tr>
     </table>
 
     <h2>Form Đăng Ký</h2>
     <form>
-        <table>
-            <tr>
-                <td>
-                    <label for="">Username:</label>
-                </td>
-                <td>
-                    <input id="user" type="text" placeholder="Enter Username">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Password:</label>
-                </td>
-                <td>
-                    <input type="password">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Web sever:</label>
-                </td>
-                <td>
-                    <select>
-                        <option>Việt Nam</option>
-                        <option>Singapore</option>
-                        <option>US</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Choose role:</label>
-                </td>
-                <td>
-                    <label><input name="role" type="radio">IT</label> <br>
-                    <label><input name="role" type="radio">Dev</label> <br>
-                    <label><input name="role" type="radio">BA</label> <br>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="">Single Sign-on:</label></td>
-                <td>
-                    <label><input type="checkbox">Mail</label> <br>
-                    <label><input type="checkbox">Zalo</label> <br>
-                    <label><input type="checkbox">Facebook</label> <br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Choose a file</label>
-                </td>
-                <td>
-                    <label><input type="file" ></label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="">Pick a date:</label></td>
-                <td><label><input type="date"></label></td>
-            </tr>
-            <tr>
-                <td><label for="">Pick a color:</label></td>
-                <td><label><input type="color"></label><td>
-            </tr>
-            <tr>
-                <td><label for="">Enter your age:</label></td>
-                <td><label><input type="number"></label></td>
-            </tr>
-            <tr>
-                <td>Introduction:</td>
-                <td><textarea></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <label><input type="submit" value="Send data"></label>
-                    <label><input type="reset" value="Reset"></label>
-                </td>
-            </tr>
-        </table>
+      <table>
+        <tr>
+          <td>
+            <label for="">Username:</label>
+          </td>
+          <td>
+            <input id="user" type="text" placeholder="Enter Username" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Password:</label>
+          </td>
+          <td>
+            <input type="password" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Web sever:</label>
+          </td>
+          <td>
+            <select>
+              <option>Việt Nam</option>
+              <option>Singapore</option>
+              <option>US</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Choose role:</label>
+          </td>
+          <td>
+            <label>
+              <input name="role" type="radio" />
+              IT
+            </label>
+            <br />
+            <label>
+              <input name="role" type="radio" />
+              Dev
+            </label>
+            <br />
+            <label>
+              <input name="role" type="radio" />
+              BA
+            </label>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Single Sign-on:</label></td>
+          <td>
+            <label>
+              <input type="checkbox" />
+              Mail
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" />
+              Zalo
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" />
+              Facebook
+            </label>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Choose a file</label>
+          </td>
+          <td>
+            <label><input type="file" /></label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Pick a date:</label></td>
+          <td>
+            <label><input type="date" /></label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Pick a color:</label></td>
+          <td>
+            <label><input type="color" /></label>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><label for="">Enter your age:</label></td>
+          <td>
+            <label><input type="number" /></label>
+          </td>
+        </tr>
+        <tr>
+          <td>Introduction:</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <label><input type="submit" value="Send data" /></label>
+            <label><input type="reset" value="Reset" /></label>
+          </td>
+        </tr>
+      </table>
     </form>
 
     <h2>Quản lý điện thoại</h2>
     <table border="1">
-        <tr bgcolor="17bebb">
-            <th>Device</th>
-            <th>Brand</th>
-            <th colspan="2">Specifications</th>
-        </tr>
-        <tr>
-            <td rowspan="3">Smartphone</td>
-            <td rowspan="3">Apple</td>
-            <th bgcolor="yellow">Model</th>
-            <th bgcolor="yellow">Storage</th>
-        </tr>
-        <tr>
-            <td>iPhone 18 Pro Max</td>
-            <td>2T</td>
-        </tr>
-        <tr>
-            <td>iPhone SE</td>
-            <td>128GB</td>
-        </tr>
-        <tr>
-            <td>Laptop</td>
-            <td>HP</td>
-            <td colspan="2">15.6"Dispaly</td>
-        </tr>
-        <tr>
-            <td>Tablet</td>
-            <td>Samsung</td>
-            <td colspan="2">10.5"Dispaly</td>
-        </tr>
+      <tr bgcolor="17bebb">
+        <th>Device</th>
+        <th>Brand</th>
+        <th colspan="2">Specifications</th>
+      </tr>
+      <tr>
+        <td rowspan="3">Smartphone</td>
+        <td rowspan="3">Apple</td>
+        <th bgcolor="yellow">Model</th>
+        <th bgcolor="yellow">Storage</th>
+      </tr>
+      <tr>
+        <td>iPhone 18 Pro Max</td>
+        <td>2T</td>
+      </tr>
+      <tr>
+        <td>iPhone SE</td>
+        <td>128GB</td>
+      </tr>
+      <tr>
+        <td>Laptop</td>
+        <td>HP</td>
+        <td colspan="2">15.6"Dispaly</td>
+      </tr>
+      <tr>
+        <td>Tablet</td>
+        <td>Samsung</td>
+        <td colspan="2">10.5"Dispaly</td>
+      </tr>
     </table>
 
     <h2>Registration Form</h2>
     <form>
-        <table>
-            <tr>
-                <td>First Name:</td>
-                <td>
-                    <input type="text" placeholder="Enter First Name">
-                </td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td>
-                    <input type="text" placeholder="Enter Last Name">
-                </td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>
-                    <input type="email" placeholder="Enter Email Address">
-                </td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td>
-                    <input type="password">
-                </td>
-            </tr>
-            <tr>
-                <td>Gender:</td>
-                <td>
-                    <label><input type="radio" name="gender"> Male</label><br>
-                    <label><input type="radio" name="gender"> Female</label><br>
-                    <label><input type="radio" name="gender"> Other</label>
-                </td>
-            </tr>
-            <tr>
-                <td>Age:</td>
-                <td>
-                    <input type="number">
-                </td>
-            </tr>
-            <tr>
-                <td>Preferences:</td>
-                <td>
-                    <label>
-                        <input type="checkbox"> Acrylic Painting
-                    </label><br>
-                    <label>
-                        <input type="checkbox"> Oil Painting
-                    </label><br>
-                    <label>
-                        <input type="checkbox"> Water Color Painting
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>Select Occupation:</td>
-                <td>
-                    <select>
-                        <option>Student</option>
-                        <option>Teacher</option>
-                        <option>Engineer</option>
-                        <option>Other</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Bio:</td>
-                <td>
-                    <textarea rows="6" cols="30" placeholder="Share few lines about yourself..."></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="reset" value="RESET">
-                </td>
-                <td>
-                    <input type="submit" value="SUBMIT">
-                </td>
-            </tr>
-        </table>
+      <table>
+        <tr>
+          <td>First Name:</td>
+          <td>
+            <input type="text" placeholder="Enter First Name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td>
+            <input type="text" placeholder="Enter Last Name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>
+            <input type="email" placeholder="Enter Email Address" />
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>
+            <input type="password" />
+          </td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <label>
+              <input type="radio" name="gender" />
+              Male
+            </label>
+            <br />
+            <label>
+              <input type="radio" name="gender" />
+              Female
+            </label>
+            <br />
+            <label>
+              <input type="radio" name="gender" />
+              Other
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td>
+            <input type="number" />
+          </td>
+        </tr>
+        <tr>
+          <td>Preferences:</td>
+          <td>
+            <label>
+              <input type="checkbox" />
+              Acrylic Painting
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" />
+              Oil Painting
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" />
+              Water Color Painting
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Select Occupation:</td>
+          <td>
+            <select>
+              <option>Student</option>
+              <option>Teacher</option>
+              <option>Engineer</option>
+              <option>Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Bio:</td>
+          <td>
+            <textarea
+              rows="6"
+              cols="30"
+              placeholder="Share few lines about yourself..."></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="reset" value="RESET" />
+          </td>
+          <td>
+            <input type="submit" value="SUBMIT" />
+          </td>
+        </tr>
+      </table>
     </form>
-</body>
+  </body>
 </html>
