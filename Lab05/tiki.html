@@ -12,22 +12,27 @@
       }
       .product {
         display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
       }
       .product-item {
         width: 20%;
         border: 1px solid #ccc;
         margin: 8px;
         border-radius: 8px;
+        box-sizing: border-box;
         cursor: pointer;
         transition:
           box-shadow 0,
           3s ease-in-out;
       }
       .product-item:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        box-shadow:
+          0 10px 20px 0 rgba(0, 0, 0, 0.2);
       }
       .product-image {
         width: 100%;
+        object-fit: cover;
       }
       .product-name,
       .star,
@@ -35,9 +40,16 @@
       .manufacturer {
         padding: 8px;
       }
+      .product-name {
+        margin: 0;
+      }
+      .star {
+        display: block;
+        color: #f5a623;
+      }
       .price {
         color: red;
-        font-weight: 600;
+        font-weight: bold;
       }
     </style>
   </head>
