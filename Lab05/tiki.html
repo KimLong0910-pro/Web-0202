@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiki Shopping</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        block-size: border-box;
+      }
+      .product {
+        display: flex;
+      }
+      .product-item {
+        width: 20%;
+        border: 1px solid #ccc;
+        margin: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          box-shadow 0,
+          3s ease-in-out;
+      }
+      .product-item:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .product-image {
+        width: 100%;
+      }
+      .product-name,
+      .star,
+      .price,
+      .manufacturer {
+        padding: 8px;
+      }
+      .price {
+        color: red;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hàng ngoại giá hot:</h2>
+    <div class="product">
+      <div class="product-item">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ499zI5zf9hCZG_pMzS18mkWqF2Eii9mgwYouuRw45Kw&s=10.png"
+          alt="Iphone 18 pro max"
+          class="product-image" />
+        <h3 class="product-name">iPhone 18 Pro Max</h3>
+        <span class="star">⭑⭑⭑⭑⭑</span>
+        <p class="price">80.999.000VND</p>
+        <p class="manufacturer">Made in USA</p>
+      </div>
+      <div class="product-item">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGOMi53FdGzxZH64D6w4Q7_570XjrbIY5eI707Isprig&s=10.png"
+          alt="Iphone 17 pro max"
+          class="product-image" />
+        <h3 class="product-name">iPhone 17 Pro Max</h3>
+        <span class="star">⭑⭑⭑⭑⭑</span>
+        <p class="price">63.000.000VND</p>
+        <p class="manufacturer">Made in USA</p>
+      </div>
+      <div class="product-item">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN34uzeitxVtkIhWxZZ5Gb5hiiCKFJ-khUx0AtK9FHqA&s=10.png"
+          alt="Iphone 16 pro max"
+          class="product-image" />
+        <h3 class="product-name">iPhone 16 Pro Max</h3>
+        <span class="star">⭑⭑⭑⭑⭑</span>
+        <p class="price">46.990.000VND</p>
+        <p class="manufacturer">Made in USA</p>
+      </div>
+      <div class="product-item">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf6gB3zS6veUSYilxG4PTL-bGG8IsAxoOGsnAF1e-FoQ&s=10.png"
+          alt="Iphone 15 pro max"
+          class="product-image" />
+        <h3 class="product-name">iPhone 15 Pro Max</h3>
+        <span class="star">⭑⭑⭑⭑⭑</span>
+        <p class="price">46.990.000VND</p>
+        <p class="manufacturer">Made in USA</p>
+      </div>
+    </div>
+  </body>
+</html>
