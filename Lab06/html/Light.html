@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bật tắt bóng đèn</title>
+  </head>
+  <body>
+    <h2>Chương trình bật / tắt bóng đèn</h2>
+    <img src="/Lab06/image/bulboff.gif" alt="light" id="bulb" width="120px" />
+    <br />
+    <br />
+    <button onclick="toggleLight()">On / Off</button>
+    <script>
+      // code javascript o day
+      function toggleLight() {
+        //anh xa
+        let toggle = document.getElementById("bulb");
+        if (toggle.src.includes("/Lab06/image/bulboff.gif")) {
+          toggle.src = "/Lab06/image/bulbon.gif";
+        } else {
+          toggle.src = "/Lab06/image/bulboff.gif";
+        }
+      }
+    </script>
+  </body>
+</html>
