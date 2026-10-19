@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 07</title>
+  </head>
+  <body>
+    <script>
+      function isAscending(arr) {
+        if (arr.length <= 1) return false;
+        for (let i = 0; i < arr.length - 1; i++) {
+          if (arr[i] >= arr[i + 1]) {
+            return false;
+          }
+        }
+        return true;
+      }
+      document.write("<p>Mảng [1, 2, 3, 5] ➔ Mảng tăng dần: <b>" + isAscending([1, 2, 3, 5]) + "</b></p>");
+    </script>
+  </body>
+</html>

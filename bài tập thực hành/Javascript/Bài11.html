@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 11</title>
+  </head>
+  <body>
+    <script>
+      function filterEvensAndSum(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            sum += arr[i];
+          }
+        }
+        return sum;
+      }
+      document.write(
+        "<p>Mảng [1, 2, 3, 4, 5, 6] ➔ Tổng số chẵn: <b>" + filterEvensAndSum([1, 2, 3, 4, 5, 6]) + "</b></p>",
+      );
+      document.write(
+        "<p>Mảng [12, 14, 15, 19, 20, 100] ➔ Tổng số chẵn: <b>" +
+          filterEvensAndSum([12, 14, 15, 19, 20, 100]) +
+          "</b></p>",
+      );
+    </script>
+  </body>
+</html>

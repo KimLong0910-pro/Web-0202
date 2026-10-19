@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 13</title>
+  </head>
+  <body>
+    <script>
+      function calculateGrade(scores) {
+        if (scores.length === 0) return "F";
+        let sum = 0;
+        for (let i = 0; i < scores.length; i++) {
+          sum += scores[i];
+        }
+        let avg = sum / scores.length;
+
+        if (avg >= 90) return "A";
+        if (avg >= 80) return "B";
+        if (avg >= 70) return "C";
+        if (avg >= 60) return "D";
+        return "F";
+      }
+      document.write("<p>Điểm [90, 95, 88] ➔ Xếp loại: <b>" + calculateGrade([90, 95, 88]) + "</b></p>");
+      document.write("<p>Điểm [70, 75, 80] ➔ Xếp loại: <b>" + calculateGrade([70, 75, 80]) + "</b></p>");
+    </script>
+  </body>
+</html>

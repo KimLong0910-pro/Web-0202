@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 03</title>
+  </head>
+  <body>
+    <script>
+      function findMin(arr) {
+        let minVal = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] < minVal) {
+            minVal = arr[i];
+          }
+        }
+        return minVal;
+      }
+      document.write("<p>Mảng [5, 2, 8, 1, 4] ➔ Số nhỏ nhất: <b>" + findMin([5, 2, 8, 1, 4]) + "</b></p>");
+    </script>
+  </body>
+</html>

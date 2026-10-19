@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 10</title>
+  </head>
+  <body>
+    <script>
+      function sumOfSquares(arr) {
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+          total += arr[i] ** 2;
+        }
+        return total;
+      }
+      document.write("<p>Mảng [1, 2, 3] ➔ Tổng bình phương: <b>" + sumOfSquares([1, 2, 3]) + "</b></p>");
+      document.write("<p>Mảng [4, 5, 6] ➔ Tổng bình phương: <b>" + sumOfSquares([4, 5, 6]) + "</b></p>");
+    </script>
+  </body>
+</html>

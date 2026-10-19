@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 12</title>
+  </head>
+  <body>
+    <script>
+      function findLongestWord(words) {
+        if (words.length === 0) return "";
+        let longest = words[0];
+        for (let i = 1; i < words.length; i++) {
+          if (words[i].length > longest.length) {
+            longest = words[i];
+          }
+        }
+        return longest;
+      }
+      document.write(
+        '<p>Từ dài nhất trong ["apple", "banana", "cherry", "date"] ➔ <b>' +
+          findLongestWord(["apple", "banana", "cherry", "date"]) +
+          "</b></p>",
+      );
+      document.write(
+        '<p>Từ dài nhất trong ["hello", "world", "this", "is", "great"] ➔ <b>' +
+          findLongestWord(["hello", "world", "this", "is", "great"]) +
+          "</b></p>",
+      );
+    </script>
+  </body>
+</html>

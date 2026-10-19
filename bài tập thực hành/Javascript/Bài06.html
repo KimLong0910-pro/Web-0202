@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 06</title>
+  </head>
+  <body>
+    <script>
+      function calculateAverage(arr) {
+        if (arr.length === 0) return 0;
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum / arr.length;
+      }
+      document.write(
+        "<p>Mảng [10, 20, 30, 40, 50] ➔ Trung bình cộng: <b>" + calculateAverage([10, 20, 30, 40, 50]) + "</b></p>",
+      );
+    </script>
+  </body>
+</html>

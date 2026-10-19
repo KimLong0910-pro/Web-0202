@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 04</title>
+  </head>
+  <body>
+    <script>
+      function countPositiveNumbers(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > 0) {
+            count++;
+          }
+        }
+        return count;
+      }
+      document.write(
+        "<p>Mảng [-1, 2, 3, -4, 5] ➔ Số lượng số dương: <b>" + countPositiveNumbers([-1, 2, 3, -4, 5]) + "</b></p>",
+      );
+    </script>
+  </body>
+</html>
