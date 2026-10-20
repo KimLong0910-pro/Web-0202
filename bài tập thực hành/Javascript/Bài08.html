@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 08</title>
+    <title>Bài 08 - countGreaterThan</title>
   </head>
   <body>
+    <h2>Bài 08:</h2>
+    <label for="arrayInput">Nhập mảng:</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 5, 7, 2, 3" style="width: 300px" />
+    <br />
+    <br />
+    <label for="valInput">Nhập giá trị so sánh (value):</label>
+    <br />
+    <input type="number" id="valInput" value="3" />
+    <br />
+    <br />
+    <button onclick="handleCalculate()">Đếm số phần tử lớn hơn</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function countGreaterThan(arr, value) {
         let count = 0;
@@ -16,13 +34,21 @@
         }
         return count;
       }
-      document.write(
-        "<p>Mảng [1, 5, 7, 2, 3] lớn hơn 3 ➔ Số lượng: <b>" + countGreaterThan([1, 5, 7, 2, 3], 3) + "</b></p>",
-      );
-      document.write(
-        "<p>Mảng [2, 3, 1, -6, 8] lớn hơn 5 ➔ Số lượng: <b>" + countGreaterThan([2, 3, 1, -6, 8], 5) + "</b></p>",
-      );
-      document.write("<p>Mảng [] lớn hơn 5 ➔ Số lượng: <b>" + countGreaterThan([], 5) + "</b></p>");
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let value = Number(document.getElementById("valInput").value);
+        let arr =
+          rawInput.trim() === ""
+            ? []
+            : rawInput
+                .replace(/[\[\]]/g, "")
+                .split(",")
+                .map((item) => Number(item.trim()))
+                .filter((item) => !isNaN(item));
+        let res = countGreaterThan(arr, value);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>

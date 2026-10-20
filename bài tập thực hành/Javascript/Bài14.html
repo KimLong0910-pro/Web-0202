@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 14</title>
+    <title>Bài 14 - findMissingNumber</title>
   </head>
   <body>
+    <h2>Bài 14:</h2>
+    <label for="arrayInput">Nhập mảng thiếu 1 số:</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 2, 4, 5, 6" style="width: 300px" />
+    <br />
+    <br />
+    <label for="nInput">Nhập n (độ dài dãy đúng):</label>
+    <br />
+    <input type="number" id="nInput" value="6" />
+    <br />
+    <br />
+    <button onclick="handleCalculate()">Tìm số thiếu</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function findMissingNumber(arr, n) {
         let expectedSum = (n * (n + 1)) / 2;
@@ -15,11 +33,18 @@
         }
         return expectedSum - actualSum;
       }
-      document.write("<p>Thiếu trong [1, 2, 4, 5, 6] (n=6) ➔ <b>" + findMissingNumber([1, 2, 4, 5, 6], 6) + "</b></p>");
-      document.write(
-        "<p>Thiếu trong [3, 7, 1, 2, 8, 4, 5] (n=8) ➔ <b>" + findMissingNumber([3, 7, 1, 2, 8, 4, 5], 8) + "</b></p>",
-      );
-      document.write("<p>Thiếu trong [1, 2, 3, 4] (n=4) ➔ <b>" + findMissingNumber([1, 2, 3, 4], 4) + "</b></p>");
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let n = Number(document.getElementById("nInput").value);
+        let arr = rawInput
+          .replace(/[\[\]]/g, "")
+          .split(",")
+          .map((item) => Number(item.trim()))
+          .filter((item) => !isNaN(item));
+        let res = findMissingNumber(arr, n);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>

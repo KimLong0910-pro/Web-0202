@@ -3,26 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 16</title>
+    <title>Bài 16 - findPairsWithSum</title>
   </head>
   <body>
+    <h2>Bài 16:</h2>
+    <label for="arrayInput">Nhập mảng số nguyên:</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 2, 3, 4, 5" style="width: 300px" />
+    <br />
+    <br />
+    <label for="sumInput">Nhập tổng cần tìm (sum):</label>
+    <br />
+    <input type="number" id="sumInput" value="5" />
+    <br />
+    <br />
+    <button onclick="handleCalculate()">Tìm các cặp số</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function findPairsWithSum(arr, sum) {
         let pairs = [];
         for (let i = 0; i < arr.length; i++) {
           for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] + arr[j] === sum) {
-              pairs.push("[" + arr[i] + ", " + arr[j] + "]");
+              pairs.push([arr[i], arr[j]]);
             }
           }
         }
         return pairs;
       }
-      document.write(
-        "<p>Các cặp có tổng = 5 từ [1, 2, 3, 4, 5] ➔ <b>[" +
-          findPairsWithSum([1, 2, 3, 4, 5], 5).join(", ") +
-          "]</b></p>",
-      );
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let sum = Number(document.getElementById("sumInput").value);
+        let arr = rawInput
+          .replace(/[\[\]]/g, "")
+          .split(",")
+          .map((item) => Number(item.trim()))
+          .filter((item) => !isNaN(item));
+        let res = findPairsWithSum(arr, sum);
+
+        let outputText = res.map((pair) => `[${pair[0]}, ${pair[1]}]`).join(", ");
+        document.getElementById("result").innerText =
+          res.length > 0 ? `[${outputText}]` : "Không có cặp số nào phù hợp";
+      }
     </script>
   </body>
 </html>

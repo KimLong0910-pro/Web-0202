@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 07</title>
+    <title>Bài 07 - isAscending</title>
   </head>
   <body>
+    <h2>Bài 07:</h2>
+    <label for="arrayInput">Nhập mảng (cách nhau bởi dấu phẩy):</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 2, 3, 5" style="width: 300px" />
+    <button onclick="handleCalculate()">Kiểm tra</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function isAscending(arr) {
         if (arr.length <= 1) return false;
@@ -16,7 +27,22 @@
         }
         return true;
       }
-      document.write("<p>Mảng [1, 2, 3, 5] ➔ Mảng tăng dần: <b>" + isAscending([1, 2, 3, 5]) + "</b></p>");
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let arr =
+          rawInput.trim() === ""
+            ? []
+            : rawInput
+                .replace(/[\[\]]/g, "")
+                .split(",")
+                .map((item) => Number(item.trim()))
+                .filter((item) => !isNaN(item));
+        let res = isAscending(arr);
+        document.getElementById("result").innerText = res
+          ? "true (Là dãy tăng dần)"
+          : "false (Không phải dãy tăng dần)";
+      }
     </script>
   </body>
 </html>

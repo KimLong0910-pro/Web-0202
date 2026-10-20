@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 10</title>
+    <title>Bài 10 - sumOfSquares</title>
   </head>
   <body>
+    <h2>Bài 10:</h2>
+    <label for="arrayInput">Nhập mảng (cách nhau bởi dấu phẩy):</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 2, 3" style="width: 300px" />
+    <button onclick="handleCalculate()">Tính tổng bình phương</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function sumOfSquares(arr) {
         let total = 0;
@@ -14,8 +25,17 @@
         }
         return total;
       }
-      document.write("<p>Mảng [1, 2, 3] ➔ Tổng bình phương: <b>" + sumOfSquares([1, 2, 3]) + "</b></p>");
-      document.write("<p>Mảng [4, 5, 6] ➔ Tổng bình phương: <b>" + sumOfSquares([4, 5, 6]) + "</b></p>");
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let arr = rawInput
+          .replace(/[\[\]]/g, "")
+          .split(",")
+          .map((item) => Number(item.trim()))
+          .filter((item) => !isNaN(item));
+        let res = sumOfSquares(arr);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>

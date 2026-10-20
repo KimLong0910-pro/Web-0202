@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 04</title>
+    <title>Bài 04 - countPositiveNumbers</title>
   </head>
   <body>
+    <h2>Bài 04:</h2>
+    <label for="arrayInput">Nhập mảng (cách nhau bởi dấu phẩy):</label>
+    <br />
+    <input type="text" id="arrayInput" value="-1, 2, 3, -4, 5" style="width: 300px" />
+    <button onclick="handleCalculate()">Đếm số dương</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function countPositiveNumbers(arr) {
         let count = 0;
@@ -16,9 +27,17 @@
         }
         return count;
       }
-      document.write(
-        "<p>Mảng [-1, 2, 3, -4, 5] ➔ Số lượng số dương: <b>" + countPositiveNumbers([-1, 2, 3, -4, 5]) + "</b></p>",
-      );
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let arr = rawInput
+          .replace(/[\[\]]/g, "")
+          .split(",")
+          .map((item) => Number(item.trim()))
+          .filter((item) => !isNaN(item));
+        let res = countPositiveNumbers(arr);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>

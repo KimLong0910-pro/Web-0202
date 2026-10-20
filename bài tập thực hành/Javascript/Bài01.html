@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 01</title>
+    <title>Bài 01 - findMax</title>
   </head>
   <body>
+    <h2>Bài 01:</h2>
+    <label for="arrayInput">Nhập mảng (cách nhau bởi dấu phẩy):</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 3, 5, 7, 9" style="width: 300px" />
+    <button onclick="handleCalculate()">Tìm số lớn nhất</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function findMax(arr) {
         let maxVal = arr[0];
@@ -16,9 +27,23 @@
         }
         return maxVal;
       }
-      document.write("<p>Mảng [1, 3, 5, 7, 9] ➔ Số lớn nhất: <b>" + findMax([1, 3, 5, 7, 9]) + "</b></p>");
-      document.write("<p>Mảng [10, 20, 30, 40, 50] ➔ Số lớn nhất: <b>" + findMax([10, 20, 30, 40, 50]) + "</b></p>");
-      document.write("<p>Mảng [-5, -2, -1, -3] ➔ Số lớn nhất: <b>" + findMax([-5, -2, -1, -3]) + "</b></p>");
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let arr = rawInput
+          .replace(/[\[\]]/g, "")
+          .split(",")
+          .map((item) => Number(item.trim()))
+          .filter((item) => !isNaN(item));
+
+        if (arr.length === 0) {
+          document.getElementById("result").innerText = "Vui lòng nhập mảng hợp lệ!";
+          return;
+        }
+
+        let res = findMax(arr);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>

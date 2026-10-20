@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 02</title>
+    <title>Bài 02 - sumOddNumbers</title>
   </head>
   <body>
+    <h2>Bài 02:</h2>
+    <label for="arrayInput">Nhập mảng (cách nhau bởi dấu phẩy):</label>
+    <br />
+    <input type="text" id="arrayInput" value="1, 2, 3, 4, 5" style="width: 300px" />
+    <button onclick="handleCalculate()">Tính tổng số lẻ</button>
+
+    <p>
+      Kết quả:
+      <b id="result">--</b>
+    </p>
+
     <script>
       function sumOddNumbers(arr) {
         let sum = 0;
@@ -16,7 +27,17 @@
         }
         return sum;
       }
-      document.write("<p>Mảng [1, 2, 3, 4, 5] ➔ Tổng số lẻ: <b>" + sumOddNumbers([1, 2, 3, 4, 5]) + "</b></p>");
+
+      function handleCalculate() {
+        let rawInput = document.getElementById("arrayInput").value;
+        let arr = rawInput
+          .replace(/[\[\]]/g, "")
+          .split(",")
+          .map((item) => Number(item.trim()))
+          .filter((item) => !isNaN(item));
+        let res = sumOddNumbers(arr);
+        document.getElementById("result").innerText = res;
+      }
     </script>
   </body>
 </html>
